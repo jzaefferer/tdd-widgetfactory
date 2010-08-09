@@ -1,23 +1,26 @@
 (function($) {
 	
-$.widget("cgnjs.edible", {
+$.widget( "cgnjs.edible", {
 	_create: function() {
 		var self = this;
-		this.element.bind("click.edible", function(event) {
+		this.element.bind("click.edible", function( event ) {
 			self.element.hide();
-			self.input.val($.trim(self.element.text())).show().focus();
+			self.input
+				.val( $.trim( self.element.text() ) )
+				.show()
+				.focus();
 		});
-		self.input = $("<input/>")
-			.insertAfter(self.element)
+		self.input = $( "<input/>" )
+			.insertAfter( self.element )
 			.hide()
 			.blur(function() {
 				$(this).hide();
 				self.element.show();
 			})
-			.keyup(function(event) {
-				self.element.text(this.value);
+			.keyup(function( event ) {
+				self.element.text( this.value );
 			});
 	}
 });
 
-})(jQuery);
+})( jQuery );
