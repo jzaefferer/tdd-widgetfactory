@@ -15,7 +15,7 @@ test("3. insert input", function() {
 	var input = edible.next(":input:visible");
 	ok( input.length, "there should be an input next to the hidden element" );
 	equal( input.val(), "text content" );
-	deepEqual( input[0], document.activeElement );
+	deepEqual( document.activeElement, input[0] );
 });
 
 test("4. toggle back on blur", function() {
