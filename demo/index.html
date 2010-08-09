@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link href="lib/smoothness/jquery-ui-1.8.4.custom.css" rel="stylesheet" type="text/css" />
-		<script src="lib/jquery-1.4.2.min.js"></script>
-		<script src="lib/jquery-ui-1.8.4.custom.min.js"></script>
-		<script src="lib/qunit.js"></script>
-		<script src="jquery.inlineeditor-ref.js"></script>
+		<link href="../lib/smoothness/jquery-ui-1.8.4.custom.css" rel="stylesheet" type="text/css" />
+		<script src="../lib/jquery-1.4.2.min.js"></script>
+		<script src="../lib/jquery-ui-1.8.4.custom.min.js"></script>
+		<script src="../jquery.edible-ref.js"></script>
 		<meta charset=utf-8 />
 		<title>Inline Editing Demo</title>
 		<style>
@@ -13,14 +12,14 @@
 			    font: 62.5% Verdana;
 			}
 		</style>
-		<script>
+		<script type="text/javascript">
 			$(function() {
-				$("#editarea").inlineEdit();
+				$("#edible").edible();
 			});
 		</script>
 	</head>
 	<body>
-		<div id="editarea">
+		<div id="edible">
 			Some text to edit
 		</div>
 	</body>
